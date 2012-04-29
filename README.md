@@ -1,0 +1,4 @@
+SanguineAndroidClient
+=====================
+
+Android Client Repository
