@@ -146,24 +146,24 @@ public class SanguineRenderer implements Renderer {
 		int vertexShaderHandle = createShader(GLES20.GL_VERTEX_SHADER, vertexShaderCode);
 		int fragmentShaderHandle = createShader(GLES20.GL_FRAGMENT_SHADER, fragmentShaderCode);
 
-		// Create a program object and store the handle to it.
+		// Create a program object and store the handle to it
 		int programHandle = GLES20.glCreateProgram();
 
 		if (programHandle != 0) {
 			// Bind the vertex shader to the program.
 			GLES20.glAttachShader(programHandle, vertexShaderHandle);
 
-			// Bind the fragment shader to the program.
+			// Bind the fragment shader to the program
 			GLES20.glAttachShader(programHandle, fragmentShaderHandle);
 
 			// Bind attributes
 			GLES20.glBindAttribLocation(programHandle, 0, "a_Position");
 			GLES20.glBindAttribLocation(programHandle, 1, "a_Color");
 
-			// Link the two shaders together into a program.
+			// Link the two shaders together into a program
 			GLES20.glLinkProgram(programHandle);
 
-			// Get the link status.
+			// Get the link status
 			final int[] linkStatus = new int[1];
 			GLES20.glGetProgramiv(programHandle, GLES20.GL_LINK_STATUS, linkStatus, 0);
 
