@@ -7,7 +7,7 @@ public class GameEngine {
 	 */
 	public int test(int i, int j) {
 		int x = 3;
-		
-		return x * i +j
+
+		return x * i + j;
 	}
 }
